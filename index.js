@@ -34,6 +34,10 @@ const Student = mongoose.model('Student', studentSchema);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Mentor Student Assign');
+  });
+  
 // create mentor endpoint
 app.post('/mentors', async (req, res) => {
   try {
